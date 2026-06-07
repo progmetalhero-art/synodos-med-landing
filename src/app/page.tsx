@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Heart, Activity, QrCode, CheckCircle2, ShieldCheck, Stethoscope, Users, ShoppingBag, Download, Quote, Mail, ChevronDown } from 'lucide-react';
+import { ArrowRight, Heart, Activity, QrCode, CheckCircle2, ShieldCheck, Stethoscope, Users, ShoppingBag, Download, Quote, Mail, ChevronDown, Phone, Facebook, Instagram } from 'lucide-react';
 
 export default function Home() {
   const [showB2BPackages, setShowB2BPackages] = useState(false);
@@ -91,7 +91,7 @@ export default function Home() {
 
             {/* Version Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              <span className="font-label-sm text-xs text-primary">Έκδοση 2.0-beta</span>
+              <span className="font-label-sm text-xs text-primary">Έκδοση 1.2</span>
               <span className="w-[1px] h-3 bg-white/20"></span>
               <span className="font-label-sm text-xs text-on-surface-variant">Διαθέσιμο Τώρα</span>
             </div>
@@ -362,21 +362,21 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <a href="mailto:info@synodos-med.gr?subject=Εγγραφή στους Testers του Synodos-Med" className="flex items-center justify-center gap-4 bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-10 py-5 rounded-2xl font-bold hover:shadow-[0_0_30px_rgba(8,145,178,0.5)] transition-all group transform hover:-translate-y-1">
-                <Mail className="group-hover:scale-110 transition-transform" size={32} />
+              <a href="https://app.synodos-med.gr" target="_blank" className="flex items-center justify-center gap-4 bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-10 py-5 rounded-2xl font-bold hover:shadow-[0_0_30px_rgba(8,145,178,0.5)] transition-all group transform hover:-translate-y-1">
+                <ShieldCheck className="group-hover:scale-110 transition-transform" size={32} />
                 <div className="text-left">
-                  <div className="text-xs font-normal opacity-80 uppercase tracking-wider">Κλειστη Beta</div>
-                  <div className="text-xl leading-tight">Γίνετε Tester</div>
+                  <div className="text-xs font-normal opacity-80 uppercase tracking-wider">Αμεσα Διαθεσιμο</div>
+                  <div className="text-xl leading-tight">Δοκιμάστε (Web App)</div>
                 </div>
               </a>
               
-              <div className="flex items-center justify-center gap-4 bg-white/5 border border-white/10 text-white/50 px-8 py-5 rounded-2xl font-bold cursor-not-allowed">
-                <img src="/play_store_icon.png" alt="Google Play" className="w-8 h-8 opacity-50 grayscale" />
+              <a href="mailto:info@synodos-med.gr?subject=Εγγραφή στους Testers του Synodos-Med" className="flex items-center justify-center gap-4 bg-white/5 border border-white/10 text-white hover:bg-white/10 px-8 py-5 rounded-2xl font-bold transition-all group">
+                <img src="/play_store_icon.png" alt="Google Play" className="w-8 h-8 group-hover:scale-110 transition-transform" />
                 <div className="text-left">
-                  <div className="text-xs font-normal opacity-80 uppercase tracking-wider">Google Play</div>
-                  <div className="text-xl leading-tight">Αναμένεται</div>
+                  <div className="text-xs font-normal opacity-80 uppercase tracking-wider text-primary">Κλειστη Beta</div>
+                  <div className="text-xl leading-tight">Εγγραφή (Google Play)</div>
                 </div>
-              </div>
+              </a>
             </div>
             <p className="mt-8 text-sm text-on-surface-variant opacity-80 max-w-lg mx-auto">
               Στείλτε μας ένα email για να σας προσθέσουμε στην επίσημη λίστα δοκιμαστών της Google και να αποκτήσετε άμεση πρόσβαση.
@@ -392,9 +392,9 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/10 mb-4">
                 <span className="font-label-sm text-xs text-primary font-bold tracking-wider">ΓΙΑ ΕΠΑΓΓΕΛΜΑΤΙΕΣ ΥΓΕΙΑΣ</span>
               </div>
-              <h2 className="font-headline-lg text-3xl md:text-4xl font-bold mb-4">Στηρίξτε την προσπάθειά μας</h2>
+              <h2 className="font-headline-lg text-3xl md:text-4xl font-bold mb-4">Στοχευμένη B2B Προβολή</h2>
               <p className="text-on-surface-variant font-body-lg max-w-2xl mx-auto mb-8">
-                Είστε επαγγελματίας υγείας; Στηρίξτε την προσπάθεια και συνδέστε το όνομά σας με μια εφαρμογή που βοηθάει ουσιαστικά τους ανθρώπους τη στιγμή που το έχουν πραγματικά ανάγκη.
+                Είστε επαγγελματίας υγείας; Συνδέστε το brand σας με την καινοτομία και προβάλετε τις υπηρεσίες σας απευθείας στο στοχευμένο κοινό των συνοδών της περιοχής σας.
               </p>
               
               <button 
@@ -498,10 +498,15 @@ export default function Home() {
             <img src="/icon-192.png" alt="Synodos-Med+ Logo" className="w-6 h-6 rounded-lg opacity-80" />
             <span className="font-headline-md text-xl font-bold text-on-surface">Synodos-<span className="text-primary">MED<span className="text-on-surface ml-[2px] font-medium">+</span></span></span>
           </div>
-          <div className="flex flex-wrap justify-center gap-8 mb-8">
+          <div className="flex flex-wrap justify-center gap-8 mb-6">
             <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="/terms.html" target="_blank">Όροι Χρήσης</Link>
             <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="/privacy.html" target="_blank">Πολιτική Απορρήτου</Link>
-            <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="mailto:info@synodos-med.gr">Επικοινωνία</Link>
+            <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md flex items-center gap-2" href="mailto:info@synodos-med.gr"><Mail size={16}/> info@synodos-med.gr</Link>
+            <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md flex items-center gap-2" href="tel:+302410000000"><Phone size={16}/> 2410 000 000</Link>
+          </div>
+          <div className="flex items-center justify-center gap-6 mb-8 text-on-surface-variant">
+            <a href="#" className="hover:text-primary transition-colors" aria-label="Facebook"><Facebook size={24} /></a>
+            <a href="#" className="hover:text-primary transition-colors" aria-label="Instagram"><Instagram size={24} /></a>
           </div>
           <p className="text-on-surface-variant font-body-md opacity-60 text-sm">
             © 2026 Synodos-MED. Όλα τα δικαιώματα διατηρούνται.
