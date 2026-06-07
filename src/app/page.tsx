@@ -382,20 +382,99 @@ export default function Home() {
           </div>
         </section>
 
-        {/* B2B / Advertising Section */}
-        <section className="px-gutter py-16 relative border-t border-outline-variant/10 bg-surface-variant/20">
-          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-center md:text-left flex-1">
-              <h3 className="font-headline-md text-2xl font-bold mb-3 text-white">Για Επαγγελματίες Υγείας</h3>
-              <p className="text-on-surface-variant">
-                Είστε φαρμακείο, κλινική ή πάροχος ιατρικού εξοπλισμού; Στηρίξτε το έργο μας ως χορηγός και προβάλετε τις υπηρεσίες σας απευθείας στο στοχευμένο κοινό των συνοδών.
+        {/* B2B / Sponsorship Section */}
+        <section className="px-gutter py-24 relative border-t border-outline-variant/10 bg-surface-variant/20 overflow-hidden">
+          <div className="absolute inset-0 bg-primary/5 blur-3xl -z-10"></div>
+          <div className="max-w-container-max mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/10 mb-4">
+                <span className="font-label-sm text-xs text-primary font-bold tracking-wider">ΓΙΑ ΕΠΑΓΓΕΛΜΑΤΙΕΣ ΥΓΕΙΑΣ</span>
+              </div>
+              <h2 className="font-headline-lg text-3xl md:text-4xl font-bold mb-4">Στηρίξτε την προσπάθειά μας</h2>
+              <p className="text-on-surface-variant font-body-lg max-w-2xl mx-auto">
+                Γίνετε χορηγός και συνδέστε το όνομά σας με μια εφαρμογή που βοηθάει ουσιαστικά τους ανθρώπους τη στιγμή που το έχουν πραγματικά ανάγκη.
               </p>
             </div>
-            <div className="flex-shrink-0">
-              <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για B2B Συνεργασία / Χορηγία στο Synodos-Med" className="inline-flex items-center gap-2 border border-primary text-primary px-6 py-3 rounded-xl font-bold hover:bg-primary/10 transition-colors group">
-                Γίνετε Συνεργάτης
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </a>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+              {/* Package 1 */}
+              <div className="glass-card p-8 rounded-3xl flex flex-col relative group hover:border-primary/50 transition-colors">
+                <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Υποστηρικτής</h3>
+                <div className="flex items-baseline gap-1 mb-6">
+                  <span className="font-headline-lg text-4xl font-extrabold text-white">100€</span>
+                  <span className="text-on-surface-variant text-sm">/ χρόνο</span>
+                </div>
+                <p className="text-on-surface-variant mb-8 text-sm">Το ιδανικό entry-point για να μας δοκιμάσετε και να δείξετε τη στήριξή σας.</p>
+                <div className="flex-1 space-y-4 mb-8">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
+                    <span className="text-sm">Το λογότυπό σας στη λίστα υποστηρικτών (Website)</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
+                    <span className="text-sm">Ειδική μνεία στα Social Media μας</span>
+                  </div>
+                </div>
+                <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για το Πακέτο: Υποστηρικτής" className="w-full block text-center border border-white/20 hover:bg-white/5 py-3 rounded-xl font-bold transition-colors">
+                  Επιλογή
+                </a>
+              </div>
+
+              {/* Package 2 */}
+              <div className="glass-card p-8 rounded-3xl flex flex-col relative border-primary/40 bg-primary/5 transform md:-translate-y-4 shadow-[0_0_30px_rgba(34,211,238,0.15)]">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-background font-bold text-xs px-4 py-1 rounded-full uppercase tracking-wider shadow-lg">Προτεινομενο</div>
+                <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Native Χορηγία</h3>
+                <div className="flex items-baseline gap-1 mb-6">
+                  <span className="font-headline-lg text-4xl font-extrabold text-white">250€</span>
+                  <span className="text-on-surface-variant text-sm">/ χρόνο</span>
+                </div>
+                <p className="text-on-surface-variant mb-8 text-sm">Διακριτική προβολή (Proudly Sponsored By) στις υπενθυμίσεις φαρμάκων, με απόλυτο σεβασμό στον χρήστη.</p>
+                <div className="flex-1 space-y-4 mb-8">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
+                    <span className="text-sm">Όλα τα προνόμια του Υποστηρικτή</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
+                    <span className="text-sm font-semibold text-white">Στατική (non-tracking) προβολή</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
+                    <span className="text-sm text-on-surface-variant">Εμφάνιση μόνο στην οθόνη Φαρμάκων, 100% Google Play Policy Compliant.</span>
+                  </div>
+                </div>
+                <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για το Πακέτο: Native Χορηγία" className="w-full block text-center bg-primary text-background hover:bg-primary/90 py-3 rounded-xl font-bold transition-colors shadow-lg shadow-primary/20">
+                  Επιλογή
+                </a>
+              </div>
+
+              {/* Package 3 */}
+              <div className="glass-card p-8 rounded-3xl flex flex-col relative group hover:border-teal-400/50 transition-colors">
+                <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Premium Partner</h3>
+                <div className="flex items-baseline gap-1 mb-6">
+                  <span className="font-headline-lg text-4xl font-extrabold text-white">500€</span>
+                  <span className="text-on-surface-variant text-sm">/ χρόνο</span>
+                </div>
+                <p className="text-on-surface-variant mb-8 text-sm">Αποκτήστε φυσική παρουσία μέσω της εφαρμογής με το σύστημα P2P QR Handover.</p>
+                <div className="flex-1 space-y-4 mb-8">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-teal-400 mt-1 shrink-0" size={18} />
+                    <span className="text-sm">Όλα τα προνόμια της Native Χορηγίας</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-teal-400 mt-1 shrink-0" size={18} />
+                    <span className="text-sm font-semibold text-white">Ορατότητα στο QR Scanner</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-teal-400 mt-1 shrink-0" size={18} />
+                    <span className="text-sm text-on-surface-variant">Άμεση διασύνδεση των φυσικών πελατών με το φαρμακείο/κλινική σας.</span>
+                  </div>
+                </div>
+                <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για το Πακέτο: Premium Partner" className="w-full block text-center border border-teal-500/50 hover:bg-teal-500/10 text-teal-400 py-3 rounded-xl font-bold transition-colors">
+                  Επιλογή
+                </a>
+              </div>
+
             </div>
           </div>
         </section>
