@@ -66,8 +66,12 @@ export default function Home() {
             <Link className="text-on-surface-variant hover:text-on-surface transition-all duration-200 font-body-md" href="#faq">Συχνές Ερωτήσεις</Link>
           </div>
           <div className="flex items-center gap-4">
-            <a href="https://synodos-med.gr/#download" className="bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-white/90 transition-all font-body-md">
-              Λήψη App
+            <a href="#beta-access" className="bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-white/90 transition-all font-body-md flex items-center gap-2">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+              </span>
+              Early Access
             </a>
           </div>
         </nav>
@@ -91,7 +95,7 @@ export default function Home() {
 
             {/* Version Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              <span className="font-label-sm text-xs text-primary">Έκδοση 1.2</span>
+              <span className="font-label-sm text-xs text-primary">Έκδοση 1.2-beta</span>
               <span className="w-[1px] h-3 bg-white/20"></span>
               <span className="font-label-sm text-xs text-on-surface-variant">Διαθέσιμο Τώρα</span>
             </div>
@@ -105,9 +109,9 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-              <a href="#download" className="flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-[0_0_20px_rgba(8,145,178,0.4)] transition-all">
-                Λήψη Εφαρμογής
-                <ArrowRight size={20} />
+              <a href="#beta-access" className="flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-[0_0_20px_rgba(8,145,178,0.4)] transition-all group">
+                Συμμετοχή στη Beta
+                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </a>
               <a href="#features" className="px-8 py-4 rounded-xl border border-white/20 backdrop-blur-md hover:bg-white/5 transition-all">
                 Δείτε πώς λειτουργεί
@@ -412,7 +416,7 @@ export default function Home() {
               <div className="glass-card p-8 rounded-3xl flex flex-col relative group hover:border-primary/50 transition-colors">
                 <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Υποστηρικτής</h3>
                 <div className="flex items-baseline gap-1 mb-6">
-                  <span className="font-headline-lg text-4xl font-extrabold text-white">100€</span>
+                  <span className="font-headline-lg text-4xl font-extrabold text-white">99€</span>
                   <span className="text-on-surface-variant text-sm">/ χρόνο</span>
                 </div>
                 <p className="text-on-surface-variant mb-8 text-sm">Το ιδανικό entry-point για να μας δοκιμάσετε και να δείξετε τη στήριξή σας.</p>
@@ -436,7 +440,7 @@ export default function Home() {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-background font-bold text-xs px-4 py-1 rounded-full uppercase tracking-wider shadow-lg">Προτεινομενο</div>
                 <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Native Χορηγία</h3>
                 <div className="flex items-baseline gap-1 mb-6">
-                  <span className="font-headline-lg text-4xl font-extrabold text-white">250€</span>
+                  <span className="font-headline-lg text-4xl font-extrabold text-white">149€</span>
                   <span className="text-on-surface-variant text-sm">/ χρόνο</span>
                 </div>
                 <p className="text-on-surface-variant mb-8 text-sm">Διακριτική προβολή (Proudly Sponsored By) στις υπενθυμίσεις φαρμάκων, με απόλυτο σεβασμό στον χρήστη.</p>
@@ -463,7 +467,7 @@ export default function Home() {
               <div className="glass-card p-8 rounded-3xl flex flex-col relative group hover:border-teal-400/50 transition-colors">
                 <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Premium Partner</h3>
                 <div className="flex items-baseline gap-1 mb-6">
-                  <span className="font-headline-lg text-4xl font-extrabold text-white">500€</span>
+                  <span className="font-headline-lg text-4xl font-extrabold text-white">249€</span>
                   <span className="text-on-surface-variant text-sm">/ χρόνο</span>
                 </div>
                 <p className="text-on-surface-variant mb-8 text-sm">Αποκτήστε φυσική παρουσία μέσω της εφαρμογής με το σύστημα P2P QR Handover.</p>
@@ -488,6 +492,51 @@ export default function Home() {
 
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Beta Access & Google Play Section */}
+        <section id="beta-access" className="px-gutter py-24 relative overflow-hidden bg-surface/30">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5 pointer-events-none"></div>
+          <div className="max-w-4xl mx-auto text-center relative z-10 glass-card p-12 rounded-[3rem] border-primary/20 shadow-[0_0_50px_rgba(8,145,178,0.1)]">
+            
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6">
+              <ShieldCheck size={16} />
+              <span className="font-bold text-sm uppercase tracking-wider">Closed Testing Phase</span>
+            </div>
+            
+            <h2 className="font-headline-lg text-4xl font-bold mb-4">Είμαστε σχεδόν έτοιμοι!</h2>
+            <p className="font-body-lg text-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+              Το Synodos-MED βρίσκεται αυτή τη στιγμή σε φάση δοκιμών (Testing) στο Google Play Store. Εγγραφείτε στη λίστα αναμονής για να λάβετε πρώτοι πρόσβαση μόλις κυκλοφορήσει επίσημα.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 max-w-md mx-auto">
+              <input 
+                type="email" 
+                placeholder="Το email σας..." 
+                className="w-full bg-background/50 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
+              />
+              <button className="w-full sm:w-auto whitespace-nowrap bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-white/90 transition-all">
+                Ειδοποιήστε με
+              </button>
+            </div>
+
+            <div className="flex flex-col items-center justify-center pt-8 border-t border-white/10">
+              <span className="text-sm text-on-surface-variant mb-4">Θα κυκλοφορήσει σύντομα στο:</span>
+              <div className="flex items-center gap-2 bg-black/50 border border-white/10 px-6 py-3 rounded-2xl grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-help" title="Εκκρεμεί έγκριση Google Play">
+                <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#00d5a3" d="M21.2 47.9l261.1 285.4L370 244.6 21.2 47.9z"/>
+                  <path fill="#00bdf6" d="M21.2 47.9L23.4 468 282.3 333.3 21.2 47.9z"/>
+                  <path fill="#ffd800" d="M282.3 333.3l87.7 88.7 101.4-58.4c17.5-10.1 23.5-32.5 13.4-50-3.3-5.7-8.3-10.3-14.2-13.3L370 244.6l-87.7 88.7z"/>
+                  <path fill="#ff385c" d="M370 244.6l100.6-55.7c17.5-10.1 23.5-32.5 13.4-50-3.3-5.7-8.3-10.3-14.2-13.3L21.2 47.9 370 244.6z"/>
+                </svg>
+                <div className="text-left ml-2">
+                  <div className="text-[10px] leading-tight uppercase tracking-wider text-gray-400">Get it on</div>
+                  <div className="text-lg leading-tight font-semibold text-white">Google Play</div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
       </main>
