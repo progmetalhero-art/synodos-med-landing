@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Heart, Activity, QrCode, CheckCircle2, ShieldCheck, Stethoscope, Users, ShoppingBag, Download, Quote, Mail, ChevronDown, Phone, Facebook, Instagram } from 'lucide-react';
+import { ArrowRight, Heart, Activity, QrCode, CheckCircle2, ShieldCheck, Stethoscope, Users, ShoppingBag, Download, Quote, Mail, ChevronDown, Phone } from 'lucide-react';
 
 export default function Home() {
   const [showB2BPackages, setShowB2BPackages] = useState(false);
@@ -505,8 +505,12 @@ export default function Home() {
             <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md flex items-center gap-2" href="tel:+302410000000"><Phone size={16}/> 2410 000 000</Link>
           </div>
           <div className="flex items-center justify-center gap-6 mb-8 text-on-surface-variant">
-            <a href="#" className="hover:text-primary transition-colors" aria-label="Facebook"><Facebook size={24} /></a>
-            <a href="#" className="hover:text-primary transition-colors" aria-label="Instagram"><Instagram size={24} /></a>
+            <a href="#" className="hover:text-primary transition-colors" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" className="hover:text-primary transition-colors" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
           </div>
           <p className="text-on-surface-variant font-body-md opacity-60 text-sm">
             © 2026 Synodos-MED. Όλα τα δικαιώματα διατηρούνται.
