@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="el"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Synodos-MED | Ο ψηφιακός βοηθός στη συνοδεία ασθενών</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #000000;
+            color: #e1e2ec;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), transparent) 1;
+        }
+
+        .glow-orb {
+            position: absolute;
+            filter: blur(120px);
+            z-index: -1;
+            border-radius: 9999px;
+            opacity: 0.15;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #00d2ff, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes slide-up {
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .animate-slide-up {
+            animation: slide-up 0.8s ease-out forwards;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "on-background": "#e1e2ec",
+                "on-surface": "#e1e2ec",
+                "background": "#10131a",
+                "primary-fixed-dim": "#adc6ff",
+                "surface": "#10131a",
+                "surface-tint": "#adc6ff",
+                "primary-fixed": "#d8e2ff",
+                "secondary": "#ddb7ff",
+                "on-secondary-fixed-variant": "#6900b3",
+                "surface-container-highest": "#32353c",
+                "tertiary-fixed-dim": "#ffb0cd",
+                "surface-container": "#1d2027",
+                "outline": "#8c909f",
+                "surface-variant": "#32353c",
+                "on-primary-fixed": "#001a42",
+                "error": "#ffb4ab",
+                "primary": "#22d3ee",
+                "on-tertiary-fixed": "#3e0022",
+                "tertiary-fixed": "#ffd9e4",
+                "on-tertiary": "#640039",
+                "on-error-container": "#ffdad6",
+                "tertiary-container": "#f751a1",
+                "on-secondary-container": "#d6a9ff",
+                "tertiary": "#ffb0cd",
+                "inverse-primary": "#005ac2",
+                "on-tertiary-container": "#570032",
+                "primary-container": "#0891b2",
+                "secondary-container": "#6f00be",
+                "error-container": "#93000a",
+                "on-primary-fixed-variant": "#004395",
+                "on-primary": "#002e6a",
+                "on-secondary-fixed": "#2c0051",
+                "surface-container-high": "#272a31",
+                "on-secondary": "#490080",
+                "surface-bright": "#363941",
+                "surface-dim": "#10131a",
+                "surface-container-low": "#191b23",
+                "on-error": "#690005",
+                "secondary-fixed": "#f0dbff",
+                "inverse-surface": "#e1e2ec",
+                "outline-variant": "#424754",
+                "on-surface-variant": "#c2c6d6",
+                "inverse-on-surface": "#2e3038",
+                "surface-container-lowest": "#0b0e15",
+                "on-primary-container": "#00285d",
+                "secondary-fixed-dim": "#ddb7ff",
+                "on-tertiary-fixed-variant": "#8c0053"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "gutter": "24px",
+                "stack-md": "24px",
+                "stack-lg": "64px",
+                "container-max": "1280px",
+                "stack-sm": "8px",
+                "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                "headline-xl": ["Manrope"],
+                "body-lg": ["Inter"],
+                "headline-lg": ["Manrope"],
+                "label-sm": ["JetBrains Mono"],
+                "headline-md": ["Manrope"],
+                "headline-xl-mobile": ["Manrope"],
+                "body-md": ["Inter"]
+              },
+              "fontSize": {
+                "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "headline-xl-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-[20px] border-b border-white/20">
+<nav class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface">
+                    Synodos-<span class="text-primary">MED</span>
+</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">Αρχική</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all duration-200 font-body-md text-body-md" href="#">Υπηρεσίες</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all duration-200 font-body-md text-body-md" href="#">Προστασία</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-all duration-200 font-body-md text-body-md" href="#">Σχετικά</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-white/90 transition-all active:scale-95 font-body-md text-body-md">
+                    Είσοδος
+                </button>
+</div>
+</nav>
+</header>
+<main class="relative pt-20">
+<!-- Background Orbs -->
+<div class="glow-orb top-[-100px] left-[-100px] w-[500px] h-[500px] bg-primary/40"></div>
+<div class="glow-orb top-[10%]" style="right: -50px; width: 400px; height: 400px; background-color: #0891b2;"></div>
+<!-- Hero Section -->
+<section class="relative px-gutter pt-32 pb-64 overflow-hidden">
+<div class="max-w-container-max mx-auto text-center relative z-10">
+<!-- Version Badge -->
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8 animate-slide-up">
+<span class="font-label-sm text-label-sm text-primary">Έκδοση 2.0-beta</span>
+<span class="w-[1px] h-3 bg-white/20"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Διαθέσιμο Τώρα</span>
+</div>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-6 max-w-4xl mx-auto">
+                    Ο ψηφιακός βοηθός στη <span class="text-gradient">συνοδεία ασθενών</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
+                    Μια ολοκληρωμένη πλατφόρμα για την παρακολούθηση υγείας, τη διαχείριση φαρμακευτικής αγωγής και την ασφαλή ανταλλαγή δεδομένων σε πραγματικό χρόνο.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+<button class="flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-[0_0_20px_rgba(8,145,178,0.4)] transition-all active:scale-95">
+                        Άνοιγμα Εφαρμογής
+                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<button class="px-8 py-4 rounded-xl border border-white/20 backdrop-blur-md hover:bg-white/5 transition-all">
+                        Δείτε πώς λειτουργεί
+                    </button>
+</div>
+<!-- Floating Mockup Card -->
+<div class="relative max-w-4xl mx-auto animate-slide-up" style="animation-delay: 0.2s;">
+<div class="absolute inset-0 bg-primary/20 blur-[100px] -z-10 rounded-full"></div>
+<div class="glass-card rounded-[2rem] p-4 sm:p-8 aspect-video flex flex-col items-center justify-center relative overflow-hidden group">
+<!-- Grid Pattern Overlay -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 32px 32px;"></div>
+<div class="relative">
+<div class="absolute -inset-8 bg-primary blur-3xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+<div class="w-32 h-32 bg-surface-container rounded-3xl flex items-center justify-center border border-white/20 shadow-2xl relative z-10">
+<span class="material-symbols-outlined text-[64px] text-primary" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+</div>
+</div>
+<div class="mt-8 text-center z-10">
+<h3 class="font-headline-md text-headline-md mb-2">Κέντρο Ελέγχου Ασθενούς</h3>
+<p class="text-on-surface-variant font-label-sm text-label-sm tracking-widest uppercase">Σύστημα κρυπτογραφημένης παρακολούθησης</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="px-gutter py-stack-lg relative">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Όλα όσα χρειάζεστε σε μία οθόνη</h2>
+<div class="h-1 w-24 bg-primary mx-auto rounded-full opacity-50"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature Card 1 -->
+<div class="glass-card p-stack-md rounded-2xl hover:border-primary transition-colors group">
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Διαχείριση Φαρμάκων</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">
+                            Έξυπνες υπενθυμίσεις και καταγραφή δόσεων με δυνατότητα διασύνδεσης με το φαρμακείο σας.
+                        </p>
+</div>
+<!-- Feature Card 2 -->
+<div class="glass-card p-stack-md rounded-2xl border-primary/30 hover:border-primary transition-colors group relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/10 blur-2xl"></div>
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(34,211,238,0.3)]">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Ζωτικά Σημεία</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">
+                            Παρακολούθηση πίεσης, οξυγόνου και καρδιακών παλμών με γραφικές παραστάσεις προόδου.
+                        </p>
+</div>
+<!-- Feature Card 3 -->
+<div class="glass-card p-stack-md rounded-2xl hover:border-primary transition-colors group relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-teal-500/10 blur-2xl"></div>
+<div class="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-[0_0_15px_rgba(20,184,166,0.3)]">
+<span class="material-symbols-outlined text-teal-500" style="font-variation-settings: 'FILL' 1;">qr_code_2</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">P2P QR Handover</h3>
+<p class="text-on-surface-variant font-body-md text-body-md">
+                            Ασφαλής μεταφορά ιατρικού ιστορικού μεταξύ συνοδών μέσω κρυπτογραφημένου κωδικού QR.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Privacy Section -->
+<section class="px-gutter py-stack-lg relative overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="glass-card p-12 rounded-[2.5rem] relative overflow-hidden">
+<!-- Gradient Background -->
+<div class="absolute inset-0 bg-gradient-to-br from-cyan-900/30 via-black to-teal-900/30 pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Απόλυτη Ιδιωτικότητα. <br/><span class="text-primary">Μηδέν Servers.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                                Η τεχνολογία μας βασίζεται στην τοπική αποθήκευση. Τα δεδομένα υγείας σας δεν φεύγουν ποτέ από τη συσκευή σας, εκτός αν επιλέξετε να τα μοιραστείτε πρόσωπο-με-πρόσωπο.
+                            </p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-teal-400" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">End-to-end κρυπτογράφηση</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-teal-400" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Δεν απαιτείται λογαριασμός Cloud</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-teal-400" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">GDPR Compliant by Architecture</span>
+</div>
+</div>
+</div>
+<div class="flex justify-center lg:justify-end">
+<div class="w-full max-w-sm aspect-square glass-card rounded-3xl flex items-center justify-center p-8 border-primary/20 bg-primary/5">
+<div class="text-center">
+<span class="material-symbols-outlined text-[80px] text-primary mb-4" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Verified Privacy</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg border-t border-outline-variant/30 bg-background">
+<div class="flex flex-col items-center justify-center gap-stack-md px-gutter w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-2 mb-4">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Synodos-<span class="text-primary">MED</span></span>
+</div>
+<div class="flex flex-wrap justify-center gap-8 mb-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Όροι Χρήσης</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Πολιτική Απορρήτου</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Επικοινωνία</a>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md opacity-60">
+                © 2024 Synodos-MED. Όλα τα δικαιώματα διατηρούνται.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'scale(0.96)';
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = 'scale(1)';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+
+        // Simple Intersection Observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body></html>
