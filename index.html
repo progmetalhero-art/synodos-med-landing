@@ -296,17 +296,22 @@
 <section class="px-gutter py-24 relative border-t border-outline-variant/10 bg-surface-variant/20 overflow-hidden">
 <div class="absolute inset-0 bg-primary/5 blur-3xl -z-10"></div>
 <div class="max-w-container-max mx-auto">
-<div class="text-center mb-16">
+<div class="text-center mb-10">
 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/10 mb-4">
 <span class="font-label-sm text-xs text-primary font-bold tracking-wider">ΓΙΑ ΕΠΑΓΓΕΛΜΑΤΙΕΣ ΥΓΕΙΑΣ</span>
 </div>
 <h2 class="font-headline-lg text-3xl md:text-4xl font-bold mb-4">Στηρίξτε την προσπάθειά μας</h2>
-<p class="text-on-surface-variant font-body-lg max-w-2xl mx-auto">
-                Γίνετε χορηγός και συνδέστε το όνομά σας με μια εφαρμογή που βοηθάει ουσιαστικά τους ανθρώπους τη στιγμή που το έχουν πραγματικά ανάγκη.
+<p class="text-on-surface-variant font-body-lg max-w-2xl mx-auto mb-8">
+                Είστε επαγγελματίας υγείας; Στηρίξτε την προσπάθεια και συνδέστε το όνομά σας με μια εφαρμογή που βοηθάει ουσιαστικά τους ανθρώπους τη στιγμή που το έχουν πραγματικά ανάγκη.
             </p>
+<button id="b2b-toggle" class="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-xl font-bold hover:bg-primary/20 transition-all active:scale-95 shadow-lg shadow-primary/20">
+                Δείτε τα Πακέτα Χορηγίας
+                <span class="material-symbols-outlined transition-transform duration-300" id="b2b-chevron">expand_more</span>
+            </button>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+<div id="b2b-content" class="transition-all duration-500 origin-top overflow-hidden opacity-0 max-h-0">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pb-4">
 <!-- Package 1 -->
 <div class="glass-card p-8 rounded-3xl flex flex-col relative group hover:border-primary/50 transition-colors">
 <h3 class="font-headline-md text-2xl font-bold text-on-surface mb-2">Υποστηρικτής</h3>
@@ -387,6 +392,8 @@
 
 </div>
 </div>
+</div>
+</div>
 </section>
 </main>
 <!-- Footer -->
@@ -436,5 +443,20 @@
         document.querySelectorAll('.glass-card').forEach(card => {
             observer.observe(card);
         });
+
+        // B2B Section Toggle
+        const b2bToggle = document.getElementById('b2b-toggle');
+        const b2bContent = document.getElementById('b2b-content');
+        const b2bChevron = document.getElementById('b2b-chevron');
+        if (b2bToggle && b2bContent) {
+            b2bToggle.addEventListener('click', () => {
+                b2bContent.classList.toggle('opacity-0');
+                b2bContent.classList.toggle('max-h-0');
+                b2bContent.classList.toggle('opacity-100');
+                b2bContent.classList.toggle('max-h-[2000px]');
+                b2bContent.classList.toggle('mt-16');
+                if (b2bChevron) b2bChevron.classList.toggle('rotate-180');
+            });
+        }
     </script>
 </body></html>

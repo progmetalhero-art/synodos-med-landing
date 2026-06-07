@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Heart, Activity, QrCode, CheckCircle2, ShieldCheck, Stethoscope, Users, ShoppingBag, Download, Quote, Mail } from 'lucide-react';
+import { ArrowRight, Heart, Activity, QrCode, CheckCircle2, ShieldCheck, Stethoscope, Users, ShoppingBag, Download, Quote, Mail, ChevronDown } from 'lucide-react';
 
 export default function Home() {
+  const [showB2BPackages, setShowB2BPackages] = useState(false);
+
   useEffect(() => {
     // Micro-interaction for buttons
     const handleMouseDown = (e: MouseEvent) => {
@@ -386,17 +388,26 @@ export default function Home() {
         <section className="px-gutter py-24 relative border-t border-outline-variant/10 bg-surface-variant/20 overflow-hidden">
           <div className="absolute inset-0 bg-primary/5 blur-3xl -z-10"></div>
           <div className="max-w-container-max mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-10">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/10 mb-4">
                 <span className="font-label-sm text-xs text-primary font-bold tracking-wider">ΓΙΑ ΕΠΑΓΓΕΛΜΑΤΙΕΣ ΥΓΕΙΑΣ</span>
               </div>
               <h2 className="font-headline-lg text-3xl md:text-4xl font-bold mb-4">Στηρίξτε την προσπάθειά μας</h2>
-              <p className="text-on-surface-variant font-body-lg max-w-2xl mx-auto">
-                Γίνετε χορηγός και συνδέστε το όνομά σας με μια εφαρμογή που βοηθάει ουσιαστικά τους ανθρώπους τη στιγμή που το έχουν πραγματικά ανάγκη.
+              <p className="text-on-surface-variant font-body-lg max-w-2xl mx-auto mb-8">
+                Είστε επαγγελματίας υγείας; Στηρίξτε την προσπάθεια και συνδέστε το όνομά σας με μια εφαρμογή που βοηθάει ουσιαστικά τους ανθρώπους τη στιγμή που το έχουν πραγματικά ανάγκη.
               </p>
+              
+              <button 
+                onClick={() => setShowB2BPackages(!showB2BPackages)}
+                className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-xl font-bold hover:bg-primary/20 transition-all active:scale-95"
+              >
+                Δείτε τα Πακέτα Χορηγίας
+                <ChevronDown size={20} className={`transition-transform duration-300 ${showB2BPackages ? "rotate-180" : ""}`} />
+              </button>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            <div className={`transition-all duration-500 origin-top overflow-hidden ${showB2BPackages ? "opacity-100 max-h-[2000px] mt-16" : "opacity-0 max-h-0"}`}>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pb-4">
               {/* Package 1 */}
               <div className="glass-card p-8 rounded-3xl flex flex-col relative group hover:border-primary/50 transition-colors">
                 <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Υποστηρικτής</h3>
@@ -475,6 +486,7 @@ export default function Home() {
                 </a>
               </div>
 
+              </div>
             </div>
           </div>
         </section>
