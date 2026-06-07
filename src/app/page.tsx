@@ -362,7 +362,7 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <a href="https://app.synodos-med.gr" target="_blank" className="flex items-center justify-center gap-4 bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-10 py-5 rounded-2xl font-bold hover:shadow-[0_0_30px_rgba(8,145,178,0.5)] transition-all group transform hover:-translate-y-1">
+              <a href="https://synodos-med.gr" target="_blank" className="flex items-center justify-center gap-4 bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-10 py-5 rounded-2xl font-bold hover:shadow-[0_0_30px_rgba(8,145,178,0.5)] transition-all group transform hover:-translate-y-1">
                 <ShieldCheck className="group-hover:scale-110 transition-transform" size={32} />
                 <div className="text-left">
                   <div className="text-xs font-normal opacity-80 uppercase tracking-wider">Αμεσα Διαθεσιμο</div>
