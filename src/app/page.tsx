@@ -103,13 +103,13 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
-              <button className="flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-[0_0_20px_rgba(8,145,178,0.4)] transition-all">
-                Άνοιγμα Εφαρμογής
+              <a href="#download" className="flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-[0_0_20px_rgba(8,145,178,0.4)] transition-all">
+                Λήψη Εφαρμογής
                 <ArrowRight size={20} />
-              </button>
-              <button className="px-8 py-4 rounded-xl border border-white/20 backdrop-blur-md hover:bg-white/5 transition-all">
+              </a>
+              <a href="#features" className="px-8 py-4 rounded-xl border border-white/20 backdrop-blur-md hover:bg-white/5 transition-all">
                 Δείτε πώς λειτουργεί
-              </button>
+              </a>
             </div>
 
             {/* Floating Mockups Preview */}
