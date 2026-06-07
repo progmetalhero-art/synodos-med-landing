@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Heart, Activity, QrCode, CheckCircle2, ShieldCheck, Stethoscope, Users, ShoppingBag, Download, Quote } from 'lucide-react';
+import { ArrowRight, Heart, Activity, QrCode, CheckCircle2, ShieldCheck, Stethoscope, Users, ShoppingBag, Download, Quote, Mail } from 'lucide-react';
 
 export default function Home() {
   useEffect(() => {
@@ -350,22 +350,34 @@ export default function Home() {
         <section id="download" className="px-gutter py-24 relative overflow-hidden text-center">
           <div className="absolute inset-0 bg-primary/10 blur-3xl -z-10"></div>
           <div className="max-w-2xl mx-auto">
-            <h2 className="font-headline-xl text-4xl md:text-5xl font-extrabold mb-6">Ξεκινήστε Σήμερα</h2>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/10 mb-6">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              <span className="font-label-sm text-xs text-primary font-bold">ΕΡΧΕΤΑΙ ΣΥΝΤΟΜΑ</span>
+            </div>
+            <h2 className="font-headline-xl text-4xl md:text-5xl font-extrabold mb-6">Γίνετε από τους πρώτους</h2>
             <p className="font-body-lg text-xl text-on-surface-variant mb-10">
-              Κατεβάστε το Synodos-Med και κάντε την οργάνωση της φροντίδας πιο εύκολη, ασφαλή και άμεση από ποτέ.
+              Η εφαρμογή βρίσκεται στο τελικό στάδιο δοκιμών πριν την επίσημη κυκλοφορία της στο Google Play. Βοηθήστε μας να την κάνουμε καλύτερη!
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <a href="/synodos-med.apk" download="synodos-med.apk" className="flex items-center justify-center gap-4 bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-10 py-5 rounded-2xl font-bold hover:shadow-[0_0_30px_rgba(8,145,178,0.5)] transition-all group transform hover:-translate-y-1">
-                <Download className="group-hover:scale-110 transition-transform" size={32} />
+              <a href="mailto:info@synodos-med.gr?subject=Εγγραφή στους Testers του Synodos-Med" className="flex items-center justify-center gap-4 bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-10 py-5 rounded-2xl font-bold hover:shadow-[0_0_30px_rgba(8,145,178,0.5)] transition-all group transform hover:-translate-y-1">
+                <Mail className="group-hover:scale-110 transition-transform" size={32} />
                 <div className="text-left">
-                  <div className="text-xs font-normal opacity-80 uppercase tracking-wider">Αμεση Ληψη</div>
-                  <div className="text-xl leading-tight">Αρχείο APK</div>
+                  <div className="text-xs font-normal opacity-80 uppercase tracking-wider">Κλειστη Beta</div>
+                  <div className="text-xl leading-tight">Γίνετε Tester</div>
                 </div>
               </a>
+              
+              <div className="flex items-center justify-center gap-4 bg-white/5 border border-white/10 text-white/50 px-8 py-5 rounded-2xl font-bold cursor-not-allowed">
+                <img src="/play_store_icon.png" alt="Google Play" className="w-8 h-8 opacity-50 grayscale" />
+                <div className="text-left">
+                  <div className="text-xs font-normal opacity-80 uppercase tracking-wider">Google Play</div>
+                  <div className="text-xl leading-tight">Αναμένεται</div>
+                </div>
+              </div>
             </div>
-            <p className="mt-6 text-xs text-on-surface-variant opacity-60">
-              Έκδοση 2.0-beta | Μέγεθος: ~15MB | Απαιτεί Android 8.0+
+            <p className="mt-8 text-sm text-on-surface-variant opacity-80 max-w-lg mx-auto">
+              Στείλτε μας ένα email για να σας προσθέσουμε στην επίσημη λίστα δοκιμαστών της Google και να αποκτήσετε άμεση πρόσβαση.
             </p>
           </div>
         </section>
