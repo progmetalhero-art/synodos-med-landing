@@ -390,9 +390,9 @@ export default function Home() {
             <span className="font-headline-md text-xl font-bold text-on-surface">Synodos-<span className="text-primary">MED<span className="text-on-surface ml-[2px] font-medium">+</span></span></span>
           </div>
           <div className="flex flex-wrap justify-center gap-8 mb-8">
-            <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Όροι Χρήσης</Link>
-            <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Πολιτική Απορρήτου</Link>
-            <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Επικοινωνία</Link>
+            <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="/terms.html" target="_blank">Όροι Χρήσης</Link>
+            <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="/privacy.html" target="_blank">Πολιτική Απορρήτου</Link>
+            <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="mailto:info@synodos-med.gr">Επικοινωνία</Link>
           </div>
           <p className="text-on-surface-variant font-body-md opacity-60 text-sm">
             © 2024 Synodos-MED. Όλα τα δικαιώματα διατηρούνται.

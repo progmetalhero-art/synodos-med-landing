@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Πολιτική Απορρήτου — Synodos Med</title>
+    <meta name="description" content="Πολιτική Απορρήτου της εφαρμογής Synodos Med. Δεδομένα, cookies, analytics και αποποίηση ιατρικής ευθύνης.">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f1117;
+            color: #e2e8f0;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #1a1f2e 0%, #0f1117 100%);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 2rem 1.5rem 1.5rem;
+            text-align: center;
+        }
+
+        .page-header .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #63b3ed;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-header h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #f7fafc;
+            margin-bottom: 0.4rem;
+        }
+
+        .page-header .meta {
+            font-size: 0.82rem;
+            color: #718096;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: #63b3ed;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: opacity 0.2s;
+        }
+        .back-link:hover { opacity: 0.7; }
+
+        .section {
+            background: #1a1f2e;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 12px;
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .section h2 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #63b3ed;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section p {
+            color: #a0aec0;
+            font-size: 0.92rem;
+            margin-bottom: 0.6rem;
+        }
+        .section p:last-child { margin-bottom: 0; }
+
+        .section ul {
+            color: #a0aec0;
+            font-size: 0.92rem;
+            padding-left: 1.4rem;
+            margin-top: 0.4rem;
+        }
+        .section ul li { margin-bottom: 0.3rem; }
+
+        .highlight-box {
+            background: rgba(99, 179, 237, 0.08);
+            border: 1px solid rgba(99, 179, 237, 0.25);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-top: 0.75rem;
+        }
+        .highlight-box p {
+            color: #bee3f8;
+            font-size: 0.88rem;
+            margin: 0;
+        }
+
+        .warning-box {
+            background: rgba(252, 129, 74, 0.08);
+            border: 1px solid rgba(252, 129, 74, 0.3);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-top: 0.75rem;
+        }
+        .warning-box p {
+            color: #fbd38d;
+            font-size: 0.88rem;
+            margin: 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(72, 187, 120, 0.15);
+            color: #68d391;
+            border: 1px solid rgba(72, 187, 120, 0.3);
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 0.15rem 0.6rem;
+            margin-left: 0.3rem;
+            letter-spacing: 0.03em;
+        }
+
+        .contact-link {
+            color: #63b3ed;
+            text-decoration: none;
+        }
+        .contact-link:hover { text-decoration: underline; }
+
+        .footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            color: #4a5568;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-header">
+    <div class="logo">⚕️ Synodos Med</div>
+    <h1>Πολιτική Απορρήτου</h1>
+    <div class="meta">Τελευταία ενημέρωση: Μάιος 2026 &nbsp;·&nbsp; Έκδοση v1.0</div>
+</div>
+
+<div class="container">
+
+    <a href="/" class="back-link">← Επιστροφή στην εφαρμογή</a>
+
+    <!-- 1. Εισαγωγή -->
+    <div class="section">
+        <h2>📋 Εισαγωγή</h2>
+        <p>Η παρούσα Πολιτική Απορρήτου περιγράφει τον τρόπο με τον οποίο η εφαρμογή <strong>Synodos Med</strong> (<em>synodos-med.gr</em>) χειρίζεται τα δεδομένα σας.</p>
+        <p>Σεβόμαστε απολύτως την ιδιωτικότητά σας. Η φιλοσοφία μας είναι <strong>Privacy-First</strong>: τα δεδομένα σας παραμένουν στη συσκευή σας.</p>
+    </div>
+
+    <!-- 2. Δεδομένα που αποθηκεύονται -->
+    <div class="section">
+        <h2>📦 Δεδομένα που αποθηκεύει η εφαρμογή</h2>
+        <p>Η εφαρμογή αποθηκεύει <strong>αποκλειστικά τοπικά</strong> στη συσκευή σας (μέσω <code>localStorage</code>) τα εξής:</p>
+        <ul>
+            <li>Καταγραφές ζωτικών σημείων (πίεση, σφυγμοί, θερμοκρασία, SpO₂)</li>
+            <li>Υπενθυμίσεις φαρμάκων και ιστορικό λήψης</li>
+            <li>Προσωπικές σημειώσεις και σημειώσεις ημερολογίου</li>
+            <li>Καταστάσεις checklists (τσεκαρισμένα πεδία)</li>
+            <li>Προτιμήσεις εφαρμογής (π.χ. θέμα χρωμάτων)</li>
+        </ul>
+        <div class="highlight-box">
+            <p>✅ <strong>Κανένα από αυτά τα δεδομένα δεν αποστέλλεται σε εξωτερικό server.</strong> Δεν υπάρχει βάση δεδομένων μας. Αν διαγράψετε τα δεδομένα της εφαρμογής από τον browser σας, διαγράφονται οριστικά.</p>
+        </div>
+    </div>
+
+    <!-- 3. Analytics -->
+    <div class="section">
+        <h2>📊 Στατιστικά χρήσης (Analytics)</h2>
+        <p>Η εφαρμογή <strong>δεν χρησιμοποιεί</strong> Google Analytics ή άλλο σύστημα παρακολούθησης χρηστών.</p>
+        <p>Ενδέχεται να συλλέγονται ανώνυμα συγκεντρωτικά στατιστικά μέσω της υποδομής <strong>Vercel</strong> (πλατφόρμα hosting), όπως:</p>
+        <ul>
+            <li>Αριθμός αιτημάτων (requests) στον server</li>
+            <li>Γεωγραφική περιοχή πρόσβασης (σε επίπεδο χώρας)</li>
+            <li>Τύπος browser / λειτουργικό σύστημα</li>
+        </ul>
+        <p>Αυτά τα δεδομένα είναι <strong>εντελώς ανώνυμα</strong>, δεν συνδέονται με καμία προσωπική ταυτότητα και χρησιμοποιούνται αποκλειστικά για τη βελτίωση της απόδοσης της εφαρμογής.</p>
+    </div>
+
+    <!-- P2P Handover -->
+    <div class="section">
+        <h2>📲 Offline Ανταλλαγή Δεδομένων (P2P Handover)</h2>
+        <p>Η εφαρμογή περιλαμβάνει λειτουργία συγχρονισμού δεδομένων κατά την αλλαγή βάρδιας (Handover) μεταξύ συνοδών. Η διαδικασία αυτή πραγματοποιείται αποκλειστικά offline μέσω σάρωσης κώδικα QR (QR Code scanning) απευθείας από τη μία συσκευή στην άλλη. Κατά τη διαδικασία αυτή, τα δεδομένα μεταφέρονται Peer-to-Peer χωρίς τη μεσολάβηση του διαδικτύου, κάποιου cloud server ή οποιασδήποτε τρίτης υπηρεσίας.</p>
+    </div>
+
+    <!-- 4. Cookies -->
+    <div class="section">
+        <h2>🍪 Cookies & Τεχνολογίες αποθήκευσης</h2>
+        <p>Η εφαρμογή <strong>δεν χρησιμοποιεί cookies</strong> για tracking ή διαφημιστικούς σκοπούς.</p>
+        <p>Χρησιμοποιούμε τις εξής τεχνολογίες αποθήκευσης του browser σας:</p>
+        <ul>
+            <li><strong>localStorage</strong> — για τα δεδομένα σας (ζωτικά, σημειώσεις, υπενθυμίσεις)</li>
+            <li><strong>Cache Storage</strong> — για την offline λειτουργία της εφαρμογής (PWA Service Worker)</li>
+        </ul>
+        <p>Μπορείτε να διαγράψετε αυτά τα δεδομένα ανά πάσα στιγμή μέσω των ρυθμίσεων του browser σας ή μέσω της λειτουργίας <em>«Εξαγωγή / Διαγραφή Δεδομένων»</em> της εφαρμογής.</p>
+    </div>
+
+    <!-- 5. Τρίτες υπηρεσίες -->
+    <div class="section">
+        <h2>🔗 Τρίτες υπηρεσίες</h2>
+        <p>Η εφαρμογή κάνει χρήση των παρακάτω εξωτερικών υπηρεσιών:</p>
+        <ul>
+            <li><strong>Google Fonts</strong> — φόρτωση γραμματοσειρών (Inter, Outfit). Η Google ενδέχεται να καταγράφει ανώνυμα αιτήματα. <a class="contact-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Πολιτική Google</a></li>
+            <li><strong>Google Maps</strong> — σύνδεσμοι πλοήγησης (ανοίγουν εκτός εφαρμογής). Χρησιμοποιείται μόνο αν επιλέξετε να ανοίξετε χάρτη.</li>
+            <li><strong>Vercel</strong> — πλατφόρμα hosting. <a class="contact-link" href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Πολιτική Vercel</a></li>
+        </ul>
+    </div>
+
+    <!-- 6. Ιατρική αποποίηση -->
+    <div class="section">
+        <h2>⚕️ Αποποίηση Ιατρικής Ευθύνης</h2>
+        <div class="warning-box">
+            <p>⚠️ <strong>Η εφαρμογή Synodos Med δεν παρέχει ιατρική διάγνωση, θεραπεία ή ιατρικές συμβουλές.</strong></p>
+        </div>
+        <p style="margin-top: 0.75rem;">Το περιεχόμενο της εφαρμογής έχει <strong>αποκλειστικά ενημερωτικό και οργανωτικό χαρακτήρα</strong> και δεν υποκαθιστά:</p>
+        <ul>
+            <li>Τη γνώμη εξειδικευμένου ιατρού ή επαγγελματία υγείας</li>
+            <li>Οδηγίες νοσοκομείου ή κλινικής</li>
+            <li>Επίσημα ιατρικά πρωτόκολλα</li>
+        </ul>
+        <p>Σε περίπτωση έκτακτης ανάγκης, καλέστε άμεσα <strong>ΕΚΑΒ 166</strong> ή <strong>Ευρωπαϊκή γραμμή έκτακτης ανάγκης 112</strong>.</p>
+    </div>
+
+    <!-- 7. Δικαιώματα χρήστη -->
+    <div class="section">
+        <h2>🔒 Τα δικαιώματά σας (GDPR)</h2>
+        <p>Σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (GDPR — Κανονισμός ΕΕ 2016/679), έχετε δικαίωμα:</p>
+        <ul>
+            <li><strong>Πρόσβασης</strong> — να γνωρίζετε τι δεδομένα αποθηκεύει η εφαρμογή</li>
+            <li><strong>Διαγραφής</strong> — να διαγράψετε όλα τα δεδομένα σας (λειτουργία εξαγωγής/διαγραφής στην εφαρμογή)</li>
+            <li><strong>Φορητότητας</strong> — να εξάγετε τα δεδομένα σας σε αρχείο JSON</li>
+        </ul>
+        <div class="highlight-box">
+            <p>Επειδή <strong>δεν διατηρούμε server</strong> με τα δεδομένα σας, η πλήρης διαγραφή γίνεται απευθείας από τη συσκευή σας, χωρίς να χρειάζεται αίτημα προς εμάς.</p>
+        </div>
+    </div>
+
+    <!-- 8. Επικοινωνία -->
+    <div class="section">
+        <h2>✉️ Επικοινωνία</h2>
+        <p>Για οποιαδήποτε ερώτηση σχετικά με την παρούσα Πολιτική Απορρήτου ή τη διαχείριση των δεδομένων σας:</p>
+        <p><strong>Email:</strong> <a href="mailto:info@synodos-med.gr" class="contact-link">info@synodos-med.gr</a></p>
+        <p><strong>Εφαρμογή:</strong> <a href="https://synodos-med.gr" class="contact-link">synodos-med.gr</a></p>
+        <p><strong>Έδρα:</strong> Λάρισα, Ελλάδα</p>
+    </div>
+
+    <!-- 9. Αλλαγές -->
+    <div class="section">
+        <h2>🔄 Αλλαγές στην Πολιτική</h2>
+        <p>Διατηρούμε το δικαίωμα να ενημερώνουμε την παρούσα Πολιτική Απορρήτου. Κάθε αλλαγή θα αναφέρεται στην ημερομηνία «Τελευταίας ενημέρωσης» στην κορυφή της σελίδας. Η συνέχιση χρήσης της εφαρμογής μετά από αλλαγές συνεπάγεται αποδοχή της νέας Πολιτικής.</p>
+    </div>
+
+    <div class="footer">
+        © 2026 Synodos Med · Λάρισα, Ελλάδα<br>
+        <span style="font-size: 0.75rem;">Η εφαρμογή δεν υποκαθιστά ιατρική συμβουλή.</span>
+    </div>
+
+</div>
+</body>
+</html>
