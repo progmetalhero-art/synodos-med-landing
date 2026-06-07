@@ -381,6 +381,24 @@ export default function Home() {
             </p>
           </div>
         </section>
+
+        {/* B2B / Advertising Section */}
+        <section className="px-gutter py-16 relative border-t border-outline-variant/10 bg-surface-variant/20">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="text-center md:text-left flex-1">
+              <h3 className="font-headline-md text-2xl font-bold mb-3 text-white">Για Επαγγελματίες Υγείας</h3>
+              <p className="text-on-surface-variant">
+                Είστε φαρμακείο, κλινική ή πάροχος ιατρικού εξοπλισμού; Στηρίξτε το έργο μας ως χορηγός και προβάλετε τις υπηρεσίες σας απευθείας στο στοχευμένο κοινό των συνοδών.
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για B2B Συνεργασία / Χορηγία στο Synodos-Med" className="inline-flex items-center gap-2 border border-primary text-primary px-6 py-3 rounded-xl font-bold hover:bg-primary/10 transition-colors group">
+                Γίνετε Συνεργάτης
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
       {/* Footer */}
       <footer className="w-full py-stack-lg border-t border-outline-variant/30 bg-background">
