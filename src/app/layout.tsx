@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Synodos-MED | Ο Ψηφιακός Βοηθός του Συνοδού Νοσοκομείου",
-  description: "Οργανώστε τη φροντίδα, καταγράψτε τα ζωτικά σημεία και αλλάξτε βάρδια με απόλυτη ασφάλεια.",
+  description: "Ο ψηφιακός συνοδός για όποιον έχει αγαπημένο πρόσωπο στο νοσοκομείο",
 };
 
 export default function RootLayout({

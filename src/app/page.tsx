@@ -64,7 +64,7 @@ export default function Home() {
             <Link className="text-on-surface-variant hover:text-on-surface transition-all duration-200 font-body-md" href="#faq">Συχνές Ερωτήσεις</Link>
           </div>
           <div className="flex items-center gap-4">
-            <a href="#download" className="bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-white/90 transition-all font-body-md">
+            <a href="https://synodos-med.gr/#download" className="bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-white/90 transition-all font-body-md">
               Λήψη App
             </a>
           </div>
@@ -413,7 +413,7 @@ export default function Home() {
             <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="mailto:info@synodos-med.gr">Επικοινωνία</Link>
           </div>
           <p className="text-on-surface-variant font-body-md opacity-60 text-sm">
-            © 2024 Synodos-MED. Όλα τα δικαιώματα διατηρούνται.
+            © 2026 Synodos-MED. Όλα τα δικαιώματα διατηρούνται.
           </p>
         </div>
       </footer>
