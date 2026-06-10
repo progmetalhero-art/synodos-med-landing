@@ -274,21 +274,21 @@ export default function Home() {
                 <h2 className="font-headline-lg text-4xl font-bold mb-6">Σε ποιους απευθύνεται;</h2>
                 <div className="space-y-6">
                   <div className="flex gap-4 items-start">
-                    <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
-                      <Stethoscope className="text-primary" size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-headline-md text-xl font-semibold mb-2">Επαγγελματίες Συνοδούς & Νοσηλευτές</h3>
-                      <p className="text-on-surface-variant">Οργανώστε τις βάρδιές σας, κρατήστε ιστορικό για πολλαπλούς ασθενείς και παραδώστε την επόμενη βάρδια γρήγορα και με ακρίβεια.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4 items-start">
                     <div className="w-12 h-12 rounded-xl bg-teal-500/20 flex items-center justify-center shrink-0">
                       <Users className="text-teal-400" size={24} />
                     </div>
                     <div>
                       <h3 className="font-headline-md text-xl font-semibold mb-2">Οικογένειες & Φροντιστές</h3>
                       <p className="text-on-surface-variant">Μείνετε συντονισμένοι με τα υπόλοιπα μέλη της οικογένειας, διαχειριστείτε τα φάρμακα και μειώστε το άγχος της καθημερινής φροντίδας.</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 items-start">
+                    <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                      <Stethoscope className="text-primary" size={24} />
+                    </div>
+                    <div>
+                      <h3 className="font-headline-md text-xl font-semibold mb-2">Επαγγελματίες Συνοδούς & Νοσηλευτές</h3>
+                      <p className="text-on-surface-variant">Οργανώστε τις βάρδιές σας, κρατήστε ιστορικό για πολλαπλούς ασθενείς και παραδώστε την επόμενη βάρδια γρήγορα και με ακρίβεια.</p>
                     </div>
                   </div>
                 </div>
