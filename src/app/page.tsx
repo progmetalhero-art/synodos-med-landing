@@ -397,65 +397,84 @@ export default function Home() {
                 <span className="font-label-sm text-xs text-primary font-bold tracking-wider">ΓΙΑ ΕΠΑΓΓΕΛΜΑΤΙΕΣ ΥΓΕΙΑΣ</span>
               </div>
               <h2 className="font-headline-lg text-3xl md:text-4xl font-bold mb-4">Στοχευμένη B2B Προβολή</h2>
-              <p className="text-on-surface-variant font-body-lg max-w-2xl mx-auto mb-8">
+              <p className="text-on-surface-variant font-body-lg max-w-2xl mx-auto mb-6">
                 Είστε επαγγελματίας υγείας; Συνδέστε το brand σας με την καινοτομία και προβάλετε τις υπηρεσίες σας απευθείας στο στοχευμένο κοινό των συνοδών της περιοχής σας.
               </p>
+
+              {/* Early Bird Banner */}
+              <div className="inline-flex items-center gap-3 bg-amber-500/10 border border-amber-500/30 text-amber-400 px-5 py-3 rounded-2xl mb-8">
+                <span className="text-lg">⚡</span>
+                <span className="text-sm font-bold">Early Bird — Μόνο για τους πρώτους 5 συνεργάτες: τιμές κλειδωμένες για πάντα</span>
+              </div>
               
-              <button 
-                onClick={() => setShowB2BPackages(!showB2BPackages)}
-                className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-xl font-bold hover:bg-primary/20 transition-all active:scale-95"
-              >
-                Δείτε τα Πακέτα Χορηγίας
-                <ChevronDown size={20} className={`transition-transform duration-300 ${showB2BPackages ? "rotate-180" : ""}`} />
-              </button>
+              <div>
+                <button 
+                  onClick={() => setShowB2BPackages(!showB2BPackages)}
+                  className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/20 px-6 py-3 rounded-xl font-bold hover:bg-primary/20 transition-all active:scale-95"
+                >
+                  Δείτε τα Πακέτα Χορηγίας
+                  <ChevronDown size={20} className={`transition-transform duration-300 ${showB2BPackages ? "rotate-180" : ""}`} />
+                </button>
+              </div>
             </div>
 
             <div className={`transition-all duration-500 origin-top overflow-hidden ${showB2BPackages ? "opacity-100 max-h-[2000px] mt-16" : "opacity-0 max-h-0"}`}>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pb-4">
               {/* Package 1 */}
               <div className="glass-card p-8 rounded-3xl flex flex-col relative group hover:border-primary/50 transition-colors">
-                <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Υποστηρικτής</h3>
-                <div className="flex items-baseline gap-1 mb-6">
-                  <span className="font-headline-lg text-4xl font-extrabold text-white">99€</span>
+                <div className="absolute top-4 right-4 bg-amber-500/20 text-amber-400 text-xs font-bold px-2 py-0.5 rounded-full border border-amber-500/30">⚡ Early Bird</div>
+                <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Βασικό</h3>
+                <div className="flex items-baseline gap-1 mb-1">
+                  <span className="font-headline-lg text-4xl font-extrabold text-white">199€</span>
                   <span className="text-on-surface-variant text-sm">/ χρόνο</span>
                 </div>
-                <p className="text-on-surface-variant mb-8 text-sm">Το ιδανικό entry-point για να μας δοκιμάσετε και να δείξετε τη στήριξή σας.</p>
+                <div className="text-xs text-on-surface-variant mb-6">~16€/μήνα</div>
+                <p className="text-on-surface-variant mb-8 text-sm">Το ιδανικό entry-point — παρουσία στον κατάλογο του site μας.</p>
                 <div className="flex-1 space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
-                    <span className="text-sm">Το λογότυπό σας στη λίστα υποστηρικτών (Website)</span>
+                    <span className="text-sm">Όνομα, διεύθυνση & τηλέφωνο</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
+                    <span className="text-sm">Ώρες λειτουργίας & χάρτης</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
                     <span className="text-sm">Ειδική μνεία στα Social Media μας</span>
                   </div>
                 </div>
-                <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για το Πακέτο: Υποστηρικτής" className="w-full block text-center border border-white/20 hover:bg-white/5 py-3 rounded-xl font-bold transition-colors">
+                <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για το Πακέτο: Βασικό" className="w-full block text-center border border-white/20 hover:bg-white/5 py-3 rounded-xl font-bold transition-colors">
                   Επιλογή
                 </a>
               </div>
 
               {/* Package 2 */}
               <div className="glass-card p-8 rounded-3xl flex flex-col relative border-primary/40 bg-primary/5 transform md:-translate-y-4 shadow-[0_0_30px_rgba(34,211,238,0.15)]">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-background font-bold text-xs px-4 py-1 rounded-full uppercase tracking-wider shadow-lg">Προτεινομενο</div>
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-background font-bold text-xs px-4 py-1 rounded-full uppercase tracking-wider shadow-lg">⭐ Προτεινόμενο</div>
                 <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Native Χορηγία</h3>
-                <div className="flex items-baseline gap-1 mb-6">
-                  <span className="font-headline-lg text-4xl font-extrabold text-white">149€</span>
+                <div className="flex items-baseline gap-1 mb-1">
+                  <span className="font-headline-lg text-4xl font-extrabold text-white">349€</span>
                   <span className="text-on-surface-variant text-sm">/ χρόνο</span>
                 </div>
-                <p className="text-on-surface-variant mb-8 text-sm">Διακριτική προβολή (Proudly Sponsored By) στις υπενθυμίσεις φαρμάκων, με απόλυτο σεβασμό στον χρήστη.</p>
+                <div className="text-xs text-on-surface-variant mb-6">~29€/μήνα</div>
+                <p className="text-on-surface-variant mb-8 text-sm">Λογότυπο & προβολή μέσα στην εφαρμογή, στην οθόνη Φαρμάκων — 100% Google Play Policy Compliant.</p>
                 <div className="flex-1 space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
-                    <span className="text-sm">Όλα τα προνόμια του Υποστηρικτή</span>
+                    <span className="text-sm">Όλα του Βασικού</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
-                    <span className="text-sm font-semibold text-white">Στατική (non-tracking) προβολή</span>
+                    <span className="text-sm font-semibold text-white">Λογότυπο & "Verified Partner" badge</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
-                    <span className="text-sm text-on-surface-variant">Εμφάνιση μόνο στην οθόνη Φαρμάκων, 100% Google Play Policy Compliant.</span>
+                    <span className="text-sm font-semibold text-white">Προβολή μέσα στην εφαρμογή</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
+                    <span className="text-sm text-on-surface-variant">Σύνδεσμος στη δική σας ιστοσελίδα</span>
                   </div>
                 </div>
                 <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για το Πακέτο: Native Χορηγία" className="w-full block text-center bg-primary text-background hover:bg-primary/90 py-3 rounded-xl font-bold transition-colors shadow-lg shadow-primary/20">
@@ -465,24 +484,30 @@ export default function Home() {
 
               {/* Package 3 */}
               <div className="glass-card p-8 rounded-3xl flex flex-col relative group hover:border-teal-400/50 transition-colors">
+                <div className="absolute top-4 right-4 bg-amber-500/20 text-amber-400 text-xs font-bold px-2 py-0.5 rounded-full border border-amber-500/30">⚡ Early Bird</div>
                 <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Premium Partner</h3>
-                <div className="flex items-baseline gap-1 mb-6">
-                  <span className="font-headline-lg text-4xl font-extrabold text-white">249€</span>
+                <div className="flex items-baseline gap-1 mb-1">
+                  <span className="font-headline-lg text-4xl font-extrabold text-white">599€</span>
                   <span className="text-on-surface-variant text-sm">/ χρόνο</span>
                 </div>
-                <p className="text-on-surface-variant mb-8 text-sm">Αποκτήστε φυσική παρουσία μέσω της εφαρμογής με το σύστημα P2P QR Handover.</p>
+                <div className="text-xs text-on-surface-variant mb-6">~50€/μήνα</div>
+                <p className="text-on-surface-variant mb-8 text-sm">Πλήρης ενσωμάτωση στην εφαρμογή — featured θέση, εφημερίες, κλήση & μηνιαία αναφορά.</p>
                 <div className="flex-1 space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="text-teal-400 mt-1 shrink-0" size={18} />
-                    <span className="text-sm">Όλα τα προνόμια της Native Χορηγίας</span>
+                    <span className="text-sm">Όλα της Native Χορηγίας</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="text-teal-400 mt-1 shrink-0" size={18} />
-                    <span className="text-sm font-semibold text-white">Ορατότητα στο QR Scanner</span>
+                    <span className="text-sm font-semibold text-white">Featured θέση — πάντα πρώτοι</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="text-teal-400 mt-1 shrink-0" size={18} />
-                    <span className="text-sm text-on-surface-variant">Άμεση διασύνδεση των φυσικών πελατών με το φαρμακείο/κλινική σας.</span>
+                    <span className="text-sm font-semibold text-white">Ειδοποίηση εφημερίας & κουμπί κλήσης</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="text-teal-400 mt-1 shrink-0" size={18} />
+                    <span className="text-sm text-on-surface-variant">Μηνιαία αναφορά εμφανίσεων 🥇</span>
                   </div>
                 </div>
                 <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για το Πακέτο: Premium Partner" className="w-full block text-center border border-teal-500/50 hover:bg-teal-500/10 text-teal-400 py-3 rounded-xl font-bold transition-colors">
