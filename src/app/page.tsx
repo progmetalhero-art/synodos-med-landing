@@ -374,7 +374,7 @@ export default function Home() {
                 </div>
               </a>
               
-              <a href="https://forms.gle/synodos-med-beta" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-4 bg-white/5 border border-white/10 text-white hover:bg-white/10 px-8 py-5 rounded-2xl font-bold transition-all group">
+              <a href="mailto:info@synodos-med.gr?subject=Εγγραφή στους Testers του Synodos-Med" className="flex items-center justify-center gap-4 bg-white/5 border border-white/10 text-white hover:bg-white/10 px-8 py-5 rounded-2xl font-bold transition-all group">
                 <img src="/play_store_icon.png" alt="Google Play" className="w-8 h-8 group-hover:scale-110 transition-transform" />
                 <div className="text-left">
                   <div className="text-xs font-normal opacity-80 uppercase tracking-wider text-primary">Κλειστη Beta</div>
@@ -444,7 +444,7 @@ export default function Home() {
                     <span className="text-sm">Ειδική μνεία στα Social Media μας</span>
                   </div>
                 </div>
-                <a href="https://forms.gle/synodos-med-partners" target="_blank" rel="noopener noreferrer" className="w-full block text-center border border-white/20 hover:bg-white/5 py-3 rounded-xl font-bold transition-colors">
+                <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για το Πακέτο: Βασικό" className="w-full block text-center border border-white/20 hover:bg-white/5 py-3 rounded-xl font-bold transition-colors">
                   Επιλογή
                 </a>
               </div>
@@ -477,7 +477,7 @@ export default function Home() {
                     <span className="text-sm text-on-surface-variant">Σύνδεσμος στη δική σας ιστοσελίδα</span>
                   </div>
                 </div>
-                <a href="https://forms.gle/synodos-med-partners" target="_blank" rel="noopener noreferrer" className="w-full block text-center bg-primary text-background hover:bg-primary/90 py-3 rounded-xl font-bold transition-colors shadow-lg shadow-primary/20">
+                <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για το Πακέτο: Native Χορηγία" className="w-full block text-center bg-primary text-background hover:bg-primary/90 py-3 rounded-xl font-bold transition-colors shadow-lg shadow-primary/20">
                   Επιλογή
                 </a>
               </div>
@@ -510,7 +510,7 @@ export default function Home() {
                     <span className="text-sm text-on-surface-variant">Στατιστικά λήψεων εφαρμογής 🥇</span>
                   </div>
                 </div>
-                <a href="https://forms.gle/synodos-med-partners" target="_blank" rel="noopener noreferrer" className="w-full block text-center border border-teal-500/50 hover:bg-teal-500/10 text-teal-400 py-3 rounded-xl font-bold transition-colors">
+                <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για το Πακέτο: Premium Partner" className="w-full block text-center border border-teal-500/50 hover:bg-teal-500/10 text-teal-400 py-3 rounded-xl font-bold transition-colors">
                   Επιλογή
                 </a>
               </div>
@@ -534,12 +534,9 @@ export default function Home() {
             <p className="font-body-lg text-lg text-on-surface-variant max-w-2xl mx-auto mb-10">
               Το Synodos-MED βρίσκεται αυτή τη στιγμή σε φάση δοκιμών (Testing) στο Google Play Store. Εγγραφείτε στη λίστα αναμονής για να λάβετε πρώτοι πρόσβαση μόλις κυκλοφορήσει επίσημα.
             </p>
-            
             <div className="flex justify-center mb-10">
               <a 
-                href="https://forms.gle/synodos-med-beta" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+                href="mailto:info@synodos-med.gr?subject=Εγγραφή στη Λίστα Δοκιμαστών του Synodos-Med" 
                 className="inline-flex items-center justify-center bg-white text-black px-10 py-5 rounded-2xl font-bold hover:bg-white/90 transition-all transform hover:-translate-y-1 shadow-lg"
               >
                 Εγγραφή στη Λίστα Δοκιμαστών
