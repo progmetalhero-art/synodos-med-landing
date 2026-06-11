@@ -6,9 +6,7 @@
     <title>Πολιτική Απορρήτου — Synodos Med</title>
     <meta name="description" content="Πολιτική Απορρήτου της εφαρμογής Synodos Med. Δεδομένα, cookies, analytics και αποποίηση ιατρικής ευθύνης.">
     <link rel="icon" type="image/svg+xml" href="icon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/fonts.css">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -225,10 +223,16 @@
         <h2>🔗 Τρίτες υπηρεσίες</h2>
         <p>Η εφαρμογή κάνει χρήση των παρακάτω εξωτερικών υπηρεσιών:</p>
         <ul>
-            <li><strong>Google Fonts</strong> — φόρτωση γραμματοσειρών (Inter, Outfit). Η Google ενδέχεται να καταγράφει ανώνυμα αιτήματα. <a class="contact-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Πολιτική Google</a></li>
             <li><strong>Google Maps</strong> — σύνδεσμοι πλοήγησης (ανοίγουν εκτός εφαρμογής). Χρησιμοποιείται μόνο αν επιλέξετε να ανοίξετε χάρτη.</li>
             <li><strong>Vercel</strong> — πλατφόρμα hosting. <a class="contact-link" href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Πολιτική Vercel</a></li>
         </ul>
+    </div>
+
+    <!-- 5β. Χορηγίες & Συνεργάτες (B2B) -->
+    <div class="section">
+        <h2>🤝 Προβολή Χορηγών & Συνεργατών</h2>
+        <p>Η εφαρμογή ενδέχεται να εμφανίζει στοιχεία επικοινωνίας τοπικών επαγγελματιών υγείας (χορηγών) με σαφή σήμανση «Χορηγός».</p>
+        <p>Η παρουσίαση αυτή είναι <strong>απολύτως offline</strong>. Δεν χρησιμοποιείται κανένα σύστημα tracking ή online analytics για την καταγραφή των εμφανίσεων ή των κλικ των χρηστών. Οποιαδήποτε στατιστική αναφορά προς τους χορηγούς βασίζεται αποκλειστικά στα συγκεντρωτικά στοιχεία λήψεων και ενεργών χρηστών της εφαρμογής από το Google Play Store (χωρίς καμία σύνδεση με δεδομένα υγείας ή προσωπικά στοιχεία των χρηστών).</p>
     </div>
 
     <!-- 6. Ιατρική αποποίηση -->
@@ -241,7 +245,7 @@
         <ul>
             <li>Τη γνώμη εξειδικευμένου ιατρού ή επαγγελματία υγείας</li>
             <li>Οδηγίες νοσοκομείου ή κλινικής</li>
-            <li>Επίσημα ιατρικά πρωτόκολλα</li>
+            <li>Επίσημα ιατρικά πρωτόкоλλα</li>
         </ul>
         <p>Σε περίπτωση έκτακτης ανάγκης, καλέστε άμεσα <strong>ΕΚΑΒ 166</strong> ή <strong>Ευρωπαϊκή γραμμή έκτακτης ανάγκης 112</strong>.</p>
     </div>
@@ -249,24 +253,27 @@
     <!-- 7. Δικαιώματα χρήστη -->
     <div class="section">
         <h2>🔒 Τα δικαιώματά σας (GDPR)</h2>
-        <p>Σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (GDPR — Κανονισμός ΕΕ 2016/679), έχετε δικαίωμα:</p>
+        <p>Σύμφωνα με τον Γενικό Κανονισμό Προστασίας Δεδομένων (GDPR — Κανονισμός ΕΕ 2016/679), έχετε τα εξής δικαιώματα:</p>
         <ul>
-            <li><strong>Πρόσβασης</strong> — να γνωρίζετε τι δεδομένα αποθηκεύει η εφαρμογή</li>
-            <li><strong>Διαγραφής</strong> — να διαγράψετε όλα τα δεδομένα σας (λειτουργία εξαγωγής/διαγραφής στην εφαρμογή)</li>
-            <li><strong>Φορητότητας</strong> — να εξάγετε τα δεδομένα σας σε αρχείο JSON</li>
+            <li><strong>Πρόσβασης & Φορητότητας</strong> — να γνωρίζετε τι δεδομένα αποθηκεύει η εφαρμογή και να τα εξάγετε σε αρχείο JSON (λειτουργία εξαγωγής στην εφαρμογή).</li>
+            <li><strong>Διόρθωσης</strong> — να τροποποιήσετε τις καταγραφές σας απευθείας μέσα από την εφαρμογή.</li>
+            <li><strong>Διαγραφής («Δικαίωμα στη λήθη»)</strong> — να διαγράψετε οριστικά όλα τα δεδομένα σας (λειτουργία διαγραφής στην εφαρμογή ή εκκαθάριση δεδομένων του browser).</li>
+            <li><strong>Περιορισμού της επεξεργασίας & Εναντίωσης</strong> — καθώς δεν επεξεργαζόμαστε δεδομένα σε servers, έχετε τον απόλυτο έλεγχο να σταματήσετε τη χρήση και να διαγράψετε τα δεδομένα σας ανά πάσα στιγμή.</li>
+            <li><strong>Υποβολής Καταγγελίας</strong> — έχετε το δικαίωμα να προσφύγετε στην Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (ΑΠΔΠΧ, Κηφισίας 1-3, Αθήνα, <a href="https://www.dpa.gr" class="contact-link" target="_blank" rel="noopener">dpa.gr</a>).</li>
         </ul>
         <div class="highlight-box">
-            <p>Επειδή <strong>δεν διατηρούμε server</strong> με τα δεδομένα σας, η πλήρης διαγραφή γίνεται απευθείας από τη συσκευή σας, χωρίς να χρειάζεται αίτημα προς εμάς.</p>
+            <p>Επειδή <strong>δεν διατηρούμε server</strong> με τα δεδομένα σας, η πλήρης διαγραφή ή διόρθωση γίνεται απευθείας από τη συσκευή σας, χωρίς να χρειάζεται αίτημα προς εμάς.</p>
         </div>
     </div>
 
     <!-- 8. Επικοινωνία -->
     <div class="section">
-        <h2>✉️ Επικοινωνία</h2>
-        <p>Για οποιαδήποτε ερώτηση σχετικά με την παρούσα Πολιτική Απορρήτου ή τη διαχείριση των δεδομένων σας:</p>
-        <p><strong>Email:</strong> <a href="mailto:info@synodos-med.gr" class="contact-link">info@synodos-med.gr</a></p>
-        <p><strong>Εφαρμογή:</strong> <a href="https://synodos-med.gr" class="contact-link">synodos-med.gr</a></p>
+        <h2>✉️ Υπεύθυνος Επεξεργασίας & Επικοινωνία</h2>
+        <p>Υπεύθυνος Επεξεργασίας Δεδομένων για την εφαρμογή είναι:</p>
+        <p><strong>Όνομα/Επωνυμία:</strong> Synodos-MED+</p>
         <p><strong>Έδρα:</strong> Λάρισα, Ελλάδα</p>
+        <p><strong>Τηλέφωνο:</strong> <a href="tel:+306983666747" class="contact-link">6983666747</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@synodos-med.gr" class="contact-link">info@synodos-med.gr</a></p>
     </div>
 
     <!-- 9. Αλλαγές -->

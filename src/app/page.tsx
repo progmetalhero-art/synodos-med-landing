@@ -221,7 +221,7 @@ export default function Home() {
                   <div className="w-full max-w-sm aspect-square glass-card rounded-3xl flex items-center justify-center p-8 border-primary/20 bg-primary/5">
                     <div className="text-center flex flex-col items-center">
                       <ShieldCheck className="text-primary mb-4" size={80} strokeWidth={1.5} />
-                      <div className="font-label-sm text-xs text-primary tracking-widest uppercase">Verified Privacy</div>
+                      <div className="font-label-sm text-xs text-primary tracking-widest uppercase">Privacy by Design</div>
                     </div>
                   </div>
                 </div>
@@ -374,7 +374,7 @@ export default function Home() {
                 </div>
               </a>
               
-              <a href="mailto:info@synodos-med.gr?subject=Εγγραφή στους Testers του Synodos-Med" className="flex items-center justify-center gap-4 bg-white/5 border border-white/10 text-white hover:bg-white/10 px-8 py-5 rounded-2xl font-bold transition-all group">
+              <a href="https://forms.gle/synodos-med-beta" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-4 bg-white/5 border border-white/10 text-white hover:bg-white/10 px-8 py-5 rounded-2xl font-bold transition-all group">
                 <img src="/play_store_icon.png" alt="Google Play" className="w-8 h-8 group-hover:scale-110 transition-transform" />
                 <div className="text-left">
                   <div className="text-xs font-normal opacity-80 uppercase tracking-wider text-primary">Κλειστη Beta</div>
@@ -401,10 +401,10 @@ export default function Home() {
                 Είστε επαγγελματίας υγείας; Συνδέστε το brand σας με την καινοτομία και προβάλετε τις υπηρεσίες σας απευθείας στο στοχευμένο κοινό των συνοδών της περιοχής σας.
               </p>
 
-              {/* Early Bird Banner */}
-              <div className="inline-flex items-center gap-3 bg-amber-500/10 border border-amber-500/30 text-amber-400 px-5 py-3 rounded-2xl mb-8">
-                <span className="text-lg">⚡</span>
-                <span className="text-sm font-bold">Early Bird — Μόνο για τους πρώτους 5 συνεργάτες: τιμές κλειδωμένες για πάντα</span>
+              {/* Founding Partners Banner */}
+              <div className="inline-flex items-center gap-3 bg-teal-500/10 border border-teal-500/30 text-teal-400 px-5 py-3 rounded-2xl mb-8">
+                <span className="text-lg">⭐</span>
+                <span className="text-sm font-bold">Πρόγραμμα Ιδρυτικών Συνεργατών: 3 μήνες ΔΩΡΕΑΝ προβολή για τους πρώτους 5 (τιμές κλειδωμένες για 3 χρόνια)</span>
               </div>
               
               <div>
@@ -422,13 +422,13 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pb-4">
               {/* Package 1 */}
               <div className="glass-card p-8 rounded-3xl flex flex-col relative group hover:border-primary/50 transition-colors">
-                <div className="absolute top-4 right-4 bg-amber-500/20 text-amber-400 text-xs font-bold px-2 py-0.5 rounded-full border border-amber-500/30">⚡ Early Bird</div>
+                <div className="absolute top-4 right-4 bg-teal-500/20 text-teal-400 text-xs font-bold px-2 py-0.5 rounded-full border border-teal-500/30">⭐ Founding Partner</div>
                 <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Βασικό</h3>
                 <div className="flex items-baseline gap-1 mb-1">
-                  <span className="font-headline-lg text-4xl font-extrabold text-white">199€</span>
-                  <span className="text-on-surface-variant text-sm">/ χρόνο</span>
+                  <span className="font-headline-lg text-4xl font-extrabold text-white">0€</span>
+                  <span className="text-on-surface-variant text-sm">/ 3 μήνες</span>
                 </div>
-                <div className="text-xs text-on-surface-variant mb-6">~16€/μήνα</div>
+                <div className="text-xs text-on-surface-variant mb-6">Μετά: 199€/χρόνο (κλειδωμένο)</div>
                 <p className="text-on-surface-variant mb-8 text-sm">Το ιδανικό entry-point — παρουσία στον κατάλογο του site μας.</p>
                 <div className="flex-1 space-y-4 mb-8">
                   <div className="flex items-start gap-3">
@@ -444,7 +444,7 @@ export default function Home() {
                     <span className="text-sm">Ειδική μνεία στα Social Media μας</span>
                   </div>
                 </div>
-                <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για το Πακέτο: Βασικό" className="w-full block text-center border border-white/20 hover:bg-white/5 py-3 rounded-xl font-bold transition-colors">
+                <a href="https://forms.gle/synodos-med-partners" target="_blank" rel="noopener noreferrer" className="w-full block text-center border border-white/20 hover:bg-white/5 py-3 rounded-xl font-bold transition-colors">
                   Επιλογή
                 </a>
               </div>
@@ -454,10 +454,10 @@ export default function Home() {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-background font-bold text-xs px-4 py-1 rounded-full uppercase tracking-wider shadow-lg">⭐ Προτεινόμενο</div>
                 <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Native Χορηγία</h3>
                 <div className="flex items-baseline gap-1 mb-1">
-                  <span className="font-headline-lg text-4xl font-extrabold text-white">349€</span>
-                  <span className="text-on-surface-variant text-sm">/ χρόνο</span>
+                  <span className="font-headline-lg text-4xl font-extrabold text-white">0€</span>
+                  <span className="text-on-surface-variant text-sm">/ 3 μήνες</span>
                 </div>
-                <div className="text-xs text-on-surface-variant mb-6">~29€/μήνα</div>
+                <div className="text-xs text-on-surface-variant mb-6">Μετά: 349€/χρόνο (κλειδωμένο)</div>
                 <p className="text-on-surface-variant mb-8 text-sm">Λογότυπο & προβολή μέσα στην εφαρμογή, στην οθόνη Φαρμάκων — 100% Google Play Policy Compliant.</p>
                 <div className="flex-1 space-y-4 mb-8">
                   <div className="flex items-start gap-3">
@@ -466,7 +466,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
-                    <span className="text-sm font-semibold text-white">Λογότυπο & "Verified Partner" badge</span>
+                    <span className="text-sm font-semibold text-white">Λογότυπο & "Privacy First Partner" badge</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="text-primary mt-1 shrink-0" size={18} />
@@ -477,21 +477,21 @@ export default function Home() {
                     <span className="text-sm text-on-surface-variant">Σύνδεσμος στη δική σας ιστοσελίδα</span>
                   </div>
                 </div>
-                <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για το Πακέτο: Native Χορηγία" className="w-full block text-center bg-primary text-background hover:bg-primary/90 py-3 rounded-xl font-bold transition-colors shadow-lg shadow-primary/20">
+                <a href="https://forms.gle/synodos-med-partners" target="_blank" rel="noopener noreferrer" className="w-full block text-center bg-primary text-background hover:bg-primary/90 py-3 rounded-xl font-bold transition-colors shadow-lg shadow-primary/20">
                   Επιλογή
                 </a>
               </div>
 
               {/* Package 3 */}
               <div className="glass-card p-8 rounded-3xl flex flex-col relative group hover:border-teal-400/50 transition-colors">
-                <div className="absolute top-4 right-4 bg-amber-500/20 text-amber-400 text-xs font-bold px-2 py-0.5 rounded-full border border-amber-500/30">⚡ Early Bird</div>
+                <div className="absolute top-4 right-4 bg-teal-500/20 text-teal-400 text-xs font-bold px-2 py-0.5 rounded-full border border-teal-500/30">⭐ Founding Partner</div>
                 <h3 className="font-headline-md text-2xl font-bold text-on-surface mb-2">Premium Partner</h3>
                 <div className="flex items-baseline gap-1 mb-1">
-                  <span className="font-headline-lg text-4xl font-extrabold text-white">599€</span>
-                  <span className="text-on-surface-variant text-sm">/ χρόνο</span>
+                  <span className="font-headline-lg text-4xl font-extrabold text-white">0€</span>
+                  <span className="text-on-surface-variant text-sm">/ 3 μήνες</span>
                 </div>
-                <div className="text-xs text-on-surface-variant mb-6">~50€/μήνα</div>
-                <p className="text-on-surface-variant mb-8 text-sm">Πλήρης ενσωμάτωση στην εφαρμογή — featured θέση, εφημερίες, κλήση & μηνιαία αναφορά.</p>
+                <div className="text-xs text-on-surface-variant mb-6">Μετά: 599€/χρόνο (κλειδωμένο)</div>
+                <p className="text-on-surface-variant mb-8 text-sm">Πλήρης ενσωμάτωση στην εφαρμογή — featured θέση, εφημερίες, κλήση & αναφορές (Google Play Console).</p>
                 <div className="flex-1 space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="text-teal-400 mt-1 shrink-0" size={18} />
@@ -507,10 +507,10 @@ export default function Home() {
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 className="text-teal-400 mt-1 shrink-0" size={18} />
-                    <span className="text-sm text-on-surface-variant">Μηνιαία αναφορά εμφανίσεων 🥇</span>
+                    <span className="text-sm text-on-surface-variant">Στατιστικά λήψεων εφαρμογής 🥇</span>
                   </div>
                 </div>
-                <a href="mailto:info@synodos-med.gr?subject=Ενδιαφέρον για το Πακέτο: Premium Partner" className="w-full block text-center border border-teal-500/50 hover:bg-teal-500/10 text-teal-400 py-3 rounded-xl font-bold transition-colors">
+                <a href="https://forms.gle/synodos-med-partners" target="_blank" rel="noopener noreferrer" className="w-full block text-center border border-teal-500/50 hover:bg-teal-500/10 text-teal-400 py-3 rounded-xl font-bold transition-colors">
                   Επιλογή
                 </a>
               </div>
@@ -535,15 +535,15 @@ export default function Home() {
               Το Synodos-MED βρίσκεται αυτή τη στιγμή σε φάση δοκιμών (Testing) στο Google Play Store. Εγγραφείτε στη λίστα αναμονής για να λάβετε πρώτοι πρόσβαση μόλις κυκλοφορήσει επίσημα.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Το email σας..." 
-                className="w-full bg-background/50 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
-              />
-              <button className="w-full sm:w-auto whitespace-nowrap bg-white text-black px-8 py-4 rounded-xl font-bold hover:bg-white/90 transition-all">
-                Ειδοποιήστε με
-              </button>
+            <div className="flex justify-center mb-10">
+              <a 
+                href="https://forms.gle/synodos-med-beta" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center justify-center bg-white text-black px-10 py-5 rounded-2xl font-bold hover:bg-white/90 transition-all transform hover:-translate-y-1 shadow-lg"
+              >
+                Εγγραφή στη Λίστα Δοκιμαστών
+              </a>
             </div>
 
             <div className="flex flex-col items-center justify-center pt-8 border-t border-white/10">
@@ -576,7 +576,7 @@ export default function Home() {
             <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="/terms.html" target="_blank">Όροι Χρήσης</Link>
             <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="/privacy.html" target="_blank">Πολιτική Απορρήτου</Link>
             <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md flex items-center gap-2" href="mailto:info@synodos-med.gr"><Mail size={16}/> info@synodos-med.gr</Link>
-            <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md flex items-center gap-2" href="tel:+302410000000"><Phone size={16}/> 2410 000 000</Link>
+            <Link className="text-on-surface-variant hover:text-primary transition-colors font-body-md flex items-center gap-2" href="tel:+306983666747"><Phone size={16}/> 6983666747</Link>
           </div>
           <div className="flex items-center justify-center gap-6 mb-8 text-on-surface-variant">
             <a href="https://www.facebook.com/profile.php?id=61590444193397" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" aria-label="Facebook">
