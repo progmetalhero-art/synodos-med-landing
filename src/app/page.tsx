@@ -95,7 +95,7 @@ export default function Home() {
 
             {/* Version Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              <span className="font-label-sm text-xs text-primary">Έκδοση 1.2-beta</span>
+              <span className="font-label-sm text-xs text-primary">Έκδοση 1.5</span>
               <span className="w-[1px] h-3 bg-white/20"></span>
               <span className="font-label-sm text-xs text-on-surface-variant">Διαθέσιμο Τώρα</span>
             </div>
